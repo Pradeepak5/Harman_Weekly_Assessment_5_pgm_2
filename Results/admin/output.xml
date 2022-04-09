@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.9.10 on win32)" generated="20220409 16:07:14.911" rpa="false" schemaversion="3">
+<suite id="s1" name="Admin" source="C:\Users\user\PycharmProjects\Harman_Weekly_Assessment_05_pgm2\Tests\CrimeManagement\FunctionalTestSuite\admin.robot">
+<test id="s1-t1" name="Admin Login test" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${web_url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220409 16:07:15.998" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<status status="PASS" starttime="20220409 16:07:15.998" endtime="20220409 16:07:28.530"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220409 16:07:28.531" endtime="20220409 16:07:28.664"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<arg>admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220409 16:07:28.664" level="INFO">Typing text 'admin' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20220409 16:07:28.664" endtime="20220409 16:07:28.797"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220409 16:07:29.800" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220409 16:07:28.797" endtime="20220409 16:07:29.800"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220409 16:07:29.800" level="INFO">Typing text '12345' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20220409 16:07:29.800" endtime="20220409 16:07:29.946"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220409 16:07:30.956" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220409 16:07:29.947" endtime="20220409 16:07:30.956"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//html/body/div/div/div/form/table/tbody/tr[3]/td[2]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220409 16:07:30.956" level="INFO">Clicking button 'xpath=//html/body/div/div/div/form/table/tbody/tr[3]/td[2]/button'.</msg>
+<status status="PASS" starttime="20220409 16:07:30.956" endtime="20220409 16:07:31.324"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220409 16:07:32.328" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220409 16:07:31.324" endtime="20220409 16:07:32.328"/>
+</kw>
+<doc>Can admin able to login?</doc>
+<tag>admin</tag>
+<status status="PASS" starttime="20220409 16:07:15.998" endtime="20220409 16:07:32.329"/>
+</test>
+<test id="s1-t2" name="View Report test" line="21">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//html/body/nav/a[1]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220409 16:07:32.329" level="INFO">Clicking link 'xpath=//html/body/nav/a[1]'.</msg>
+<status status="PASS" starttime="20220409 16:07:32.329" endtime="20220409 16:07:32.486"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220409 16:07:34.498" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220409 16:07:32.487" endtime="20220409 16:07:34.498"/>
+</kw>
+<doc>Once admin logged in can able to view report?</doc>
+<tag>admin</tag>
+<status status="PASS" starttime="20220409 16:07:32.329" endtime="20220409 16:07:34.498"/>
+</test>
+<test id="s1-t3" name="Filter With Date test" line="27">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//html/body/nav/a[2]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220409 16:07:34.498" level="INFO">Clicking link 'xpath=//html/body/nav/a[2]'.</msg>
+<status status="PASS" starttime="20220409 16:07:34.498" endtime="20220409 16:07:34.698"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220409 16:07:37.703" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220409 16:07:34.699" endtime="20220409 16:07:37.703"/>
+</kw>
+<doc>Admin Able to Filter With Date?</doc>
+<tag>admin</tag>
+<status status="PASS" starttime="20220409 16:07:34.498" endtime="20220409 16:07:37.703"/>
+</test>
+<test id="s1-t4" name="Admin Logout test" line="33">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//html/body/nav/a[3]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220409 16:07:37.703" level="INFO">Clicking link 'xpath=//html/body/nav/a[3]'.</msg>
+<status status="PASS" starttime="20220409 16:07:37.703" endtime="20220409 16:07:37.841"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220409 16:07:39.866" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220409 16:07:37.845" endtime="20220409 16:07:39.866"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220409 16:07:39.866" endtime="20220409 16:07:42.456"/>
+</kw>
+<doc>Can admin able to logout?</doc>
+<tag>admin</tag>
+<status status="PASS" starttime="20220409 16:07:37.703" endtime="20220409 16:07:42.456"/>
+</test>
+<status status="PASS" starttime="20220409 16:07:14.911" endtime="20220409 16:07:42.456"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="0" skip="0">admin</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Admin">Admin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
